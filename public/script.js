@@ -1,9 +1,9 @@
 const socket = io('/');
 const videoGrid = document.getElementById('video-grid');
-const myPeer = new Peer('10', {
+peer = new Peer({
+  host: 'peerjs-server.herokuapp.com',
   secure: true,
-  host: 'video-chat-clone.herokuapp.com',
-  port: '443',
+  port: 443,
 });
 const myVideo = document.createElement('video');
 myVideo.muted = true;
